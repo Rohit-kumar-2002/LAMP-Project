@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Form Example</title>
+<style>
+/* Your CSS styles here */
+body {
+    background-color: #333333;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+form {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+.radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin-right: 10px;
+}
+input[type="radio"] {
+    margin-right: 5px;
+}
+.radio-udp {
+    color: #ADD8E6;
+}
+.radio-arp {
+    color: #FFC0CB;
+}
+.radio-tcp {
+    color: #90EE90;
+}
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+input[type="submit"] {
+    background-color: #009688;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #00796B;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+}
+</style>
+</head>
+<body>
+<form action="submit_form.php" method="POST">
+    <h1 style="text-align: center;">Packets</h1>
+    <div class="radio-container">
+        <label for="udp" class="radio-udp">UDP</label>
+        <input type="radio" id="udp" name="protocol" value="udp" required>
+    </div>
+    <div class="radio-container">
+        <label for="arp" class="radio-arp">ARP</label>
+        <input type="radio" id="arp" name="protocol" value="arp" required>
+    </div>
+    <div class="radio-container">
+        <label for="tcp" class="radio-tcp">TCP</label>
+        <input type="radio" id="tcp" name="protocol" value="tcp" required>
+    </div>
+
+    <label for="dropdown">Select an option:</label>
+    <select id="dropdown" name="option">
+        <option value="ALL">ALL</option>
+        <option value="Timestamp">Timestamp</option>
+        <option value="Source MAC Address">Source MAC Address</option>
+        <option value="Destination MAC Address">Destination MAC Address</option>
+        <option value="EtherType">EtherType</option>
+        <option value="Frame length">Frame length</option>
+        <option value="Total packet length">Total packet length</option>
+        <option value="Source IP address">Source IP address</option>
+        <option value="Source port">Source port</option>
+        <option value="Destination IP address">Destination IP address</option>
+        <option value="Destination port">Destination port</option>
+        <option value="Protocol">Protocol</option>
+        <option value="Payload length">Payload length</option>
+        <option value="ARP Operation">ARP Operation</option>
+        <option value="ARP Payload Length">ARP Payload Length</option>
+    </select>
+
+    <div class="submit-container">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
+</html>
