@@ -1,0 +1,25 @@
+Create MySQL User and Grant Privileges:
+
+CREATE USER 'rohit'@'localhost' IDENTIFIED BY 'cciitk';
+GRANT ALL PRIVILEGES ON logininfo.* TO 'rohit'@'localhost';
+FLUSH PRIVILEGES;
+
+
+Create Table:
+
+CREATE TABLE credentials (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+Insert Data into Table:
+
+
+INSERT INTO credentials (username, password) VALUES
+('user', 'password'),
+('user2', 'password2'),
+('user3', 'password3');
+
+
